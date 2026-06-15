@@ -30,7 +30,7 @@ body{
      background:#0a0a0a0a;
   }
   ::-webkit-scrollbar-thumb{
-    background:linear-gradient(180deg,#463947,#79697b );
+    background:linear-gradient(180deg,#463947,#081b00 );
   }
   ::-webkit-scrollbar-thumb:hover{
     background: linear-gradient(#ab3063f2,#1d4c01);

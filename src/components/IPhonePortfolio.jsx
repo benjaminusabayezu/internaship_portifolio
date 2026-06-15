@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
-// ─── Your data — edit here ────────────────────────────────────────────────────
+
+
 const DEVELOPER = {
   initials: "BE",
   name: "Benjamin",
@@ -18,13 +19,13 @@ const DEVELOPER = {
   ],
   projects: [
     {
-      icon: "⚡",
+      icon: "..",
       name: "Portfolio v2",
       tech: "React · Tailwind · GSAP",
       status: "live",
     },
     {
-      icon: "🧪",
+      icon: "...",
       name: "QA Dashboard",
       tech: "Django · PostgreSQL · REST",
       status: "building",
@@ -32,7 +33,7 @@ const DEVELOPER = {
   ],
 };
 
-// ─── Zinc body variants — the only "color picker" ─────────────────────────────
+
 const ZINC_THEMES = [
   {
     bg: "linear-gradient(160deg,#27272a,#18181b,#09090b)",
@@ -56,7 +57,7 @@ const ZINC_THEMES = [
   },
 ];
 
-// lime accent tokens
+
 const LIME = {
   base: "#a3e635", // lime-400
   bright: "#bef264", // lime-300
@@ -65,7 +66,7 @@ const LIME = {
   faintMid: "rgba(163,230,53,0.22)",
 };
 
-// ─── Commit activity grid ─────────────────────────────────────────────────────
+
 const ACTIVITY_LEVELS = [
   "rgba(163,230,53,0.10)",
   "rgba(163,230,53,0.25)",
@@ -87,7 +88,7 @@ function generateActivity(count = 56) {
   });
 }
 
-// ─── Status bar ───────────────────────────────────────────────────────────────
+//Status bar 
 function StatusBar() {
   return (
     <div
@@ -161,7 +162,7 @@ function StatusBar() {
   );
 }
 
-// ─── Dynamic Island ───────────────────────────────────────────────────────────
+
 function DynamicIsland() {
   return (
     <div
@@ -202,7 +203,7 @@ function DynamicIsland() {
   );
 }
 
-// ─── Section label ────────────────────────────────────────────────────────────
+
 function Label({ children }) {
   return (
     <div
@@ -221,7 +222,7 @@ function Label({ children }) {
   );
 }
 
-// ─── Skill bar ────────────────────────────────────────────────────────────────
+
 function SkillBar({ name, pct }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
@@ -273,7 +274,7 @@ function SkillBar({ name, pct }) {
   );
 }
 
-// ─── Project card ─────────────────────────────────────────────────────────────
+//Project card 
 function ProjectCard({ icon, name, tech, status }) {
   const isLive = status === "live";
   return (
@@ -351,7 +352,7 @@ function ProjectCard({ icon, name, tech, status }) {
   );
 }
 
-// ─── Portfolio screen content ─────────────────────────────────────────────────
+//  Portfolio screen content
 function PortfolioScreen({ developer }) {
   const [activity] = useState(() => generateActivity(56));
 
@@ -544,7 +545,7 @@ export default function IPhonePortfolio({
     rotY: -20,
   });
 
-  // auto-cycle zinc themes
+  
   const startAuto = useCallback(() => {
     clearInterval(autoRef.current);
     autoRef.current = setInterval(
@@ -768,7 +769,7 @@ export default function IPhonePortfolio({
         </div>
       </div>
 
-      {/* Zinc theme switcher */}
+      
       <div
         style={{
           display: "flex",
